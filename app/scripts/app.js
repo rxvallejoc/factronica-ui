@@ -8,8 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('factronicaUiApp', [
+var factronica = angular.module('factronicaUiApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,8 +17,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+factronica.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
